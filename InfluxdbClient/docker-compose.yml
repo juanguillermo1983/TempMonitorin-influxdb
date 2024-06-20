@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  influxdb-client:
+    image: python-client  # Nombre de la imagen ya creada
+    container_name: influxdb-container
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true
+    command: bash
+
